@@ -35,6 +35,17 @@ fetch("https://fakestoreapi.com/products")
     console.log(err);
 })
 
+//adding loader 
+window.addEventListener('load',() => {
+    const loader = document.querySelector(".loader");
+
+    loader.classList.add("loader--hidden");  
+
+    loader.addEventListener('transitionend',() => {
+    document.body.removeChild(document.querySelector(".loader"));
+ });
+});
+
 
 /*Map method 
  it runs function for each object inside the array
